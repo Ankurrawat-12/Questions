@@ -8,3 +8,6 @@ int main()
     int height[n];
     
 }
+
+// not done
+// https://leetcode.com/problems/trapping-rain-water/

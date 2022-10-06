@@ -49,3 +49,4 @@ int* find_two_numbers(int numbers[], int n, int target){
 }
 
 // Done now just have to do this dynamically
+// https://leetcode.com/problems/two-sum/

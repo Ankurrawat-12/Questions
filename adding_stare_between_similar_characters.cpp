@@ -31,3 +31,4 @@ void add_star(string& word, string& new_word, int i){
 }
 
 //done
+// https://www.geeksforgeeks.org/recursive-program-to-insert-a-star-between-pair-of-identical-characters/

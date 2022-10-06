@@ -25,3 +25,4 @@ int main()
 }
 
 // not done
+// https://www.codingninjas.com/codestudio/problem-details/remove-character_1263701
