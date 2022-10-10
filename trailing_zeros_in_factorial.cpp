@@ -12,7 +12,11 @@ int main(){
     cin>>number;
     // int factorial = find_factorial(number);
     // int trailing_zeros = find_trailing_zeros(factorial);
-    int trailing_zeros = floor(number/5) + floor(number/25) + floor(number/125);
+    // int trailing_zeros = floor(number/5) + floor(number/25) + floor(number/125);
+    int trailing_zeros = 0;
+    for(int i = 5; i <= number; i = i*5){
+        trailing_zeros = trailing_zeros + number/i;
+    }
     cout<<trailing_zeros;
 }
 
