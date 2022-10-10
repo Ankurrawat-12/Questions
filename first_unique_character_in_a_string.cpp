@@ -23,3 +23,6 @@ int main(){
     cout<<-1;
     return 0;
 }
+
+// done
+// https://leetcode.com/problems/first-unique-character-in-a-string/
