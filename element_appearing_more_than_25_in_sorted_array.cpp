@@ -10,5 +10,5 @@ int main(){
     for(int i = 0; i < length; i++){
         cin>>sorted_array[i];
     }
-    i
+
 }
