@@ -38,3 +38,6 @@ int main(){
         cout<<domain_answer[i]<<endl;
     }
 }
+
+// not done
+// https://leetcode.com/problems/subdomain-visit-count/
