@@ -2,38 +2,47 @@
 
 using namespace std;
 
+int NormalmaximumSumOfArray(int arr[], int sizeOfArray);
+int CircularMaximumSumOfArray(int arr[], int sizeOfArray);
+
 int main(){
     int sizeOfArray;
     cin>>sizeOfArray;
 
-    int arra[sizeOfArray];
+    int arr[sizeOfArray];
 
     for (int i = 0; i < sizeOfArray; i++)
     {
-        cin>>arra[i];
+        cin>>arr[i];
     }
-    // int arr[sizeOfArray*2] = arra[];
-    int arr[sizeOfArray*2];
+    int maximumCircularSum = CircularMaximumSumOfArray(arr, sizeOfArray);
+    cout<<maximumCircularSum;
+    return 0;    
+}
 
-    for(int i = 0; i < sizeOfArray*2; i++){
-        if(i < sizeOfArray){
-            arr[i] = arra[i];
-        }
-        else{
-            arr[i] = arra[i - sizeOfArray];
-        }
-    }
 
+int NormalmaximumSumOfArray(int arr[], int sizeOfArray){
     int maxEnding = arr[0];
     int result = arr[0];
 
-    for (int i = 1; i < sizeOfArray*2; i++)
+    for (int i = 1; i < sizeOfArray; i++)
     {
         maxEnding = max((maxEnding+ arr[i]), arr[i]);
         result = max(maxEnding, result);
     }
-    cout<<result;
-    return 0;
+    return result;
 }
 
-// done
+int CircularMaximumSumOfArray(int arr[], int sizeOfArray){
+    int maximumNormalSum = NormalmaximumSumOfArray(arr, sizeOfArray);
+    if(maximumNormalSum < 0){
+        return maximumNormalSum;
+    }
+    int arraySum = 0;
+    for(int i = 0; i < sizeOfArray; i++){
+        arraySum += arr[i];
+        arr[i] = -arr[i];
+    }
+    int maximumCircularSum = arraySum + NormalmaximumSumOfArray(arr, sizeOfArray);
+    return max(maximumCircularSum, maximumNormalSum);
+}
