@@ -26,6 +26,13 @@ int *deletionInArray(int arr[], int toDelete, int sizeOfArray){
     }
     return arr;
 }
+void function(int **arr){
+    for(int i = 0; i< (sizeof(arr)/sizeof(arr[0]))/2; i++){
+        int temp = arr[i];
+        arr[i] = arr[((sizeof(arr)/sizeof(arr[0]))/2) -i];
+        arr[((sizeof(arr)/sizeof(arr[0]))/2) -i] = temp;
+    }
+}
 
 int main(){
     int sizeOfArray;
@@ -63,6 +70,14 @@ int main(){
             cout<<arr[i]<<" ";
         }
         break;
+    case 4:
+        for(int i = 0; i < sizeOfArray - 1; i++){
+            cout<<arr[i]<<" ";
+        }
+        function(&arr);
+        for(int i = 0; i < sizeOfArray - 1; i++){
+            cout<<arr[i]<<" ";
+        }
     default:
         break;
     }
