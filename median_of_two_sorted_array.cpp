@@ -33,7 +33,7 @@ int main(){
     //     cin>>arrTwo[i];
     // }
     
-    int arr[sizeOfArrayOne+sizeOfArrayTwo];
+    float arr[sizeOfArrayOne+sizeOfArrayTwo];
 
     for (int i = 0; i < sizeOfArrayOne+sizeOfArrayTwo; i++)
     {
@@ -42,14 +42,17 @@ int main(){
 
     sort(arr, arr + (sizeOfArrayOne+sizeOfArrayTwo));
 
-    float median =0;
     if((sizeOfArrayOne+sizeOfArrayTwo)%2 != 0){
-        median = float(arr[(sizeOfArrayOne+sizeOfArrayTwo - 2)/2 + 1]);
+        float median = (float)arr[(sizeOfArrayOne+sizeOfArrayTwo - 2)/2 + 1];
+        cout<<median;
     }
     else{
-        median = float((arr[(sizeOfArrayOne+sizeOfArrayTwo - 2)/2] + arr[(sizeOfArrayOne+sizeOfArrayTwo - 2)/2 + 1]) / 2);
+        float median = (arr[(sizeOfArrayOne+sizeOfArrayTwo - 2)/2] + arr[(sizeOfArrayOne+sizeOfArrayTwo - 2)/2 + 1]) / 2;
+        cout<<median;
     }
-    cout<<setprecision(2)<<median;
     return 0;
     
 } 
+
+// https://leetcode.com/problems/median-of-two-sorted-arrays/
+// done
