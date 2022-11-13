@@ -42,3 +42,6 @@ int main(){
     cout<<ans;
     return 0;
 }
+
+// https://leetcode.com/problems/remove-all-adjacent-duplicates-in-string/
+// done
