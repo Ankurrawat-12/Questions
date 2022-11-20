@@ -38,50 +38,53 @@
 //     return 0;
 // }
 
-#include <iostream>
+#include <bits/stdc++.h>
 using namespace std;
 
-void swap(int[],int[]);
+// void swap(int[],int[]);
 
 int main() {
     
-    int array1[5] = {10,20,30,40,50};
-    int array2[5] = {60,70,80,90,100};
+    // int array1[5] = {10,20,30,40,50};
+    // int array2[5] = {60,70,80,90,100};
 
-    cout<<"The original arrays are as shown below: " << endl;
-    cout << " Array 1 is: ";
-    for (int i = 0; i < 5; ++i) {
-        cout << array1[i] << "  ";
-    }
-    cout << "\n Array 2 is: ";
-    for (int i = 0; i < 5; ++i) {
-        cout << array2[i] << "  ";
-    }
+    // cout<<"The original arrays are as shown below: " << endl;
+    // cout << " Array 1 is: ";
+    // for (int i = 0; i < 5; ++i) {
+    //     cout << array1[i] << "  ";
+    // }
+    // cout << "\n Array 2 is: ";
+    // for (int i = 0; i < 5; ++i) {
+    //     cout << array2[i] << "  ";
+    // }
 
-    swap(array1, array2);
+    // swap(array1, array2);
 
-    cout<<"The original arrays are as shown below: " << endl;
-    cout << " Array 1 is: ";
-    for (int i = 0; i < 5; ++i) {
-        cout << array1[i] << "  ";
-    }
-    cout << "\n Array 2 is: ";
-    for (int i = 0; i < 5; ++i) {
-        cout << array2[i] << "  ";
-    }
+    // cout<<"The original arrays are as shown below: " << endl;
+    // cout << " Array 1 is: ";
+    // for (int i = 0; i < 5; ++i) {
+    //     cout << array1[i] << "  ";
+    // }
+    // cout << "\n Array 2 is: ";
+    // for (int i = 0; i < 5; ++i) {
+    //     cout << array2[i] << "  ";
+    // }
+    string equation;
+    cin>>equation;
+    cout<<equation.eval();
     
     return 0;
     
 }
 
-void swap(int array1[], int array2[])
-{
+// void swap(int array1[], int array2[])
+// {
     
-    int temp,i;
-    for(i=0; i<5; ++i)
-    {
-        temp = array1[i];
-        array1[i] = array2[i];
-        array2[i] = temp;
-    }
-} 
+//     int temp,i;
+//     for(i=0; i<5; ++i)
+//     {
+//         temp = array1[i];
+//         array1[i] = array2[i];
+//         array2[i] = temp;
+//     }
+// } 
