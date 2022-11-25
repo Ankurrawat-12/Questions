@@ -69,10 +69,19 @@ int main() {
     // for (int i = 0; i < 5; ++i) {
     //     cout << array2[i] << "  ";
     // }
-    string equation;
-    cin>>equation;
-    cout<<equation.eval();
-    
+    // string equation;
+    // cin>>equation;
+    // cout<<equation.eval();
+    char a = '.';
+    char b = '.';
+    if(a == '.'){
+        a = NULL;
+    }
+    if(b == '.'){
+        b = NULL;
+    }
+    bool isTrue  = (a != b);
+    cout<<isTrue;
     return 0;
     
 }
