@@ -5,10 +5,12 @@ using namespace std;
 class node
 {
 public:
+    node *prev;
     int data;
     node *next;
     node(int val)
     {
+        prev = NULL;
         data = val;
         next = NULL;
     }
@@ -24,14 +26,16 @@ void insertAtHead(int val)
         return;
     }
     newNode->next = head;
+    head->prev = newNode;
     head = newNode;
 }
 void display()
 {
     node *temp = head;
+    cout<<"NULL<->";
     while (temp != NULL)
     {
-        cout << temp->data << "->";
+        cout << temp->data << "<->";
         temp = temp->next;
     }
     cout << "NULL"<<endl;
@@ -50,6 +54,7 @@ void insertAtTail(int val)
         temp = temp->next;
     }
     temp->next = newNode;
+    newNode->prev = temp;
 }
 void insertAtAPoint(int val, int pos)
 {
@@ -67,6 +72,8 @@ void insertAtAPoint(int val, int pos)
         curr++;
     }
     newNode->next = temp->next;
+    newNode->prev = temp;
+    temp->next->prev = newNode;
     temp->next = newNode;
 }
 
@@ -110,6 +117,7 @@ void deleteANode(int pos)
         curr++;
     }
     node *del = temp->next;
+    temp->next->next->prev = temp;
     temp->next = temp->next->next;
     delete del;
 }
